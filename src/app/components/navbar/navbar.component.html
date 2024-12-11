@@ -1,0 +1,81 @@
+<nav class="bg-white shadow-lg fixed w-full z-10">
+  <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="#" class="flex items-center">
+      <img src="assets/logo-luzmila.webp" alt="Eye Center Logo" class="h-12" />
+    </a>
+
+    <!-- Hamburger Menu Button (for mobile) -->
+    <div class="block md:hidden">
+      <button id="menu-button" class="text-gray-700 focus:outline-none">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation Links -->
+    <div id="menu" class="hidden md:flex space-x-6 items-center">
+      <a
+        href="#home"
+        class="text-gray-700 hover:text-primary transition duration-300"
+        >الرئيسية</a
+      >
+      <a
+        href="#services"
+        class="text-gray-700 hover:text-primary transition duration-300"
+        >الخدمات</a
+      >
+      <a
+        href="#about"
+        class="text-gray-700 hover:text-primary transition duration-300"
+        >من نحن</a
+      >
+      <a
+        href="#contact"
+        class="text-gray-700 hover:text-primary transition duration-300"
+        >تواصل معنا</a
+      >
+      <button
+        class="bg-primary text-white py-2 px-4 rounded-full hover:bg-primary-dark transition duration-300"
+      >
+        احجز موعداً
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+    <a
+      href="#home"
+      class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition duration-300"
+      >الرئيسية</a
+    >
+    <a
+      href="#services"
+      class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition duration-300"
+      >الخدمات</a
+    >
+    <a
+      href="#about"
+      class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition duration-300"
+      >من نحن</a
+    >
+    <a
+      href="#contact"
+      class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition duration-300"
+      >تواصل معنا</a
+    >
+  </div>
+</nav>

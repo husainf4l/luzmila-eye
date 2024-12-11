@@ -1,0 +1,120 @@
+<div
+  class="hero bg-white h-screen flex flex-col md:flex-row items-center relative font-cairo p-24"
+>
+  <!-- Logo Section -->
+
+  <!-- Left Section: Text Content -->
+  <div class="container mx-auto px-6 py-12 md:w-1/2 text-center md:text-right">
+    <img
+      src="assets/logo-luzmila.png"
+      alt="Eye Center Logo"
+      class="w-20 md:w-96"
+    />
+
+    <div class="text-center md:text-right mt-6">
+      <h1
+        class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug"
+      >
+        مستقبل
+        <span class="text-blue-900 animate-pulse">رؤية واضحة</span> يبدأ هنا
+      </h1>
+      <p class="mt-4 text-lg md:text-xl text-gray-600">
+        احصل على
+        <span
+          class="text-gradient bg-gradient-to-r text-blue-800 text-transparent bg-clip-text"
+          >رؤية واضحة</span
+        >
+        بدون نظارات
+      </p>
+    </div>
+
+    <p class="mt-4 text-lg md:text-lg text-gray-600">
+      نقدم لك حلولاً متقدمة للعناية بعينيك، مع فريق من الخبراء .
+    </p>
+    <div class="mt-6 flex justify-center md:justify-start">
+      <button
+        class="bg-sky-600 text-white py-3 px-8 rounded-full font-medium shadow-lg hover:shadow-xl hover:bg-primary-dark transition duration-300"
+        (click)="openModal()"
+      >
+        احجز موعدك الآن
+      </button>
+    </div>
+  </div>
+
+  <!-- Right Section: Image -->
+  <div class="md:w-1/2 flex justify-center items-center px-6">
+    <img
+      src="assets/hero.jpg"
+      alt="Eye Center"
+      class="w-full md:w-4/5 rounded-lg shadow-lg transform hover:scale-105 transition duration-500"
+    />
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  *ngIf="isModalOpen"
+  class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center"
+>
+  <div class="bg-white p-8 rounded-lg shadow-lg w-11/12 md:w-1/3">
+    <h2 class="text-2xl font-bold mb-4 text-gray-900">احجز موعدك</h2>
+    <form (ngSubmit)="submitBooking()">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-medium mb-2"
+          >الاسم</label
+        >
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="formData.name"
+          name="name"
+          class="w-full border-gray-300 rounded-md shadow-sm focus:ring-sky-600 focus:border-sky-600"
+          placeholder="أدخل اسمك"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label for="mobile" class="block text-gray-700 font-medium mb-2"
+          >رقم الهاتف</label
+        >
+        <input
+          type="tel"
+          id="mobile"
+          [(ngModel)]="formData.mobile"
+          name="mobile"
+          class="w-full border-gray-300 rounded-md shadow-sm focus:ring-sky-600 focus:border-sky-600"
+          placeholder="أدخل رقم هاتفك"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label for="notes" class="block text-gray-700 font-medium mb-2"
+          >ملاحظات</label
+        >
+        <textarea
+          id="notes"
+          [(ngModel)]="formData.notes"
+          name="notes"
+          rows="3"
+          class="w-full border-gray-300 rounded-md shadow-sm focus:ring-sky-600 focus:border-sky-600"
+          placeholder="أدخل ملاحظاتك"
+        ></textarea>
+      </div>
+      <div class="flex justify-end gap-6">
+        <button
+          type="button"
+          class="bg-gray-400 text-white py-2 px-4 rounded-md mr-2 hover:bg-gray-500"
+          (click)="closeModal()"
+        >
+          إلغاء
+        </button>
+        <button
+          type="submit"
+          class="bg-sky-600 text-white py-2 px-4 rounded-md hover:bg-sky-700"
+        >
+          إرسال
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
